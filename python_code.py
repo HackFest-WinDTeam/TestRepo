@@ -41,3 +41,5 @@ if __name__ == "__main__":
             time.sleep(0.15)
     except KeyboardInterrupt:
         print(f"\n\033[93mArt session ended after {frame_count} frames. Goodbye!\033[0m")
+
+#Rev by Marek Matyja 
