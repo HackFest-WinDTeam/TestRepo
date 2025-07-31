@@ -8,7 +8,15 @@
 
 Solution Proposal Document
 
-Execution SectorDigital Solutions and AI SectorSolution Reference Number SEC.3.12Solution NameSEC.3.12 HSSE Safety ChatbotDate30 – 05 – 2025
+Execution Sector
+Digital Solutions and AI Sector
+Solution Reference Number 
+SEC.3.12
+Solution Name
+SEC.3.12 HSSE Safety Chatbot
+Date
+30 ï¿½ 05 ï¿½ 2025
+
 
 Digital Solutions and Artificial Intelligence Sector
 Digital Products Delivery Department
@@ -17,11 +25,87 @@ Saudi Electricity Company
 
 
 
-Service Order8501357319Digital Focus AreaDigitalized Core BusinessesBusiness LineHSSEBusiness ChampionShoaib Al-Harbi & Mohammed AlAnaziBusiness Champion’s ManagerDT Project ManagerGhadeer Khalid Al Mugren Complexity of Use Case (H / M / L)M
+Service Order
+8501357319
+Digital Focus Area
+Digitalized Core Businesses
+Business Line
+HSSE
+Business Champion
+Shoaib Al-Harbi & Mohammed AlAnazi
+Business Championï¿½s Manager
 
-VersionDateAuthorChanges made1.025-02-2025Barbara GodekInitial draft2.019-03-2025Barbara GodekArabic included as MVP 6 in Scope and Timeline updated3.023-04-2025Barbara GodekUpdates post review against SoW with SEC4.021-05-2025Barbara GodekUpdates based on the feedback received on 15 May 20255.030-05-2025Barbara GodekUpdates based on feedback received on 23 May
+DT Project Manager
+Ghadeer Khalid Al Mugren 
+Complexity of Use Case (H / M / L)
+M
 
-AcronymsFull formAD Active Directory AI Artificial Intelligence APIs Application Programming Interface BL Business Line BRD Business Requirement Document DEV Development Environment DT Digital Transformation HSSEHealth, Safety, Security and environmentLLMLarge Language ModelMVP Minimum Viable Product ML Machine Learning PROD Production Environment QA Quality Assurance  SEC Saudi Electricity Company SoW Scope of Work UAT User Acceptance Test UI User Interface UX User Experience 
+
+Version
+Date
+Author
+Changes made
+1.0
+25-02-2025
+Barbara Godek
+Initial draft
+2.0
+19-03-2025
+Barbara Godek
+Arabic included as MVP 6 in Scope and Timeline updated
+3.0
+23-04-2025
+Barbara Godek
+Updates post review against SoW with SEC
+4.0
+21-05-2025
+Barbara Godek
+Updates based on the feedback received on 15 May 2025
+5.0
+30-05-2025
+Barbara Godek
+Updates based on feedback received on 23 May
+
+
+Acronyms
+Full form
+AD 
+Active Directory 
+AI 
+Artificial Intelligence 
+APIs 
+Application Programming Interface 
+BL 
+Business Line 
+BRD 
+Business Requirement Document 
+DEV 
+Development Environment 
+DT 
+Digital Transformation 
+HSSE
+Health, Safety, Security and environment
+LLM
+Large Language Model
+MVP 
+Minimum Viable Product 
+ML 
+Machine Learning 
+PROD 
+Production Environment 
+QA 
+Quality Assurance  
+SEC 
+Saudi Electricity Company 
+SoW 
+Scope of Work 
+UAT 
+User Acceptance Test 
+UI 
+User Interface 
+UX 
+User Experience 
+
 
 
 Contents
@@ -73,15 +157,15 @@ The document is required to establish a common understanding of the objectives a
 ? No digital automation is currently available to handle topics related to the HSSE safety management system. Queries are currently addressed through traditional methods like emails, phone calls, and in-person meetings. These queries are not recorded nor analyzed in any structured manner.   
 ? The proposed solution is to develop a chatbot that can provide employees with information and knowledge about safety-related topics, particularly focusing on safety management system (procedures, standards, etc.). This solution will be accessible through mobile applications.  
 2.2. Automation opportunities
-? Automating requests for Health-and-safety – related topics 
-? Automating responses for Health-and-safety – related topics, based on ISMS Standards documentation and AMAN (Enablon) Health-and-safety management system 
+? Automating requests for Health-and-safety ï¿½ related topics 
+? Automating responses for Health-and-safety ï¿½ related topics, based on ISMS Standards documentation and AMAN (Enablon) Health-and-safety management system 
 2.3. Business objectives and success/acceptance criteria
-The business objectives for this solution include: 
-? Providing real time answers on HSSE topics to stakeholders    
-? Providing mobility options i.e. access to?Chatbot via a web application 
-? Providing a formal communication gateway for safety knowledge and information    
-? Enhancing safety knowledge and culture in SEC    
-? Minimizing delays and currently time-consuming process of answering questions and inquiries 
+The business objectives for this solution include:ï¿½
+? Providing real time answers on HSSE topics to stakeholdersï¿½ï¿½ï¿½ï¿½
+? Providing mobility options i.e. access to?Chatbot via a web applicationï¿½
+? Providing a formal communication gateway for safety knowledge and informationï¿½ï¿½ï¿½ï¿½
+? Enhancing safety knowledge and culture in SECï¿½ï¿½ï¿½ï¿½
+? Minimizing delays and currently time-consuming process of answering questions and inquiriesï¿½
 
 
 
@@ -91,22 +175,50 @@ The business objectives for this solution include: 
 3. Back-end Architecture
 
 3.1. High level architecture
-The following Design Decisions have been made for the implementation of the H&S Chatbot: 
-* Translation service (only in option 3): dependency on IBM to deliver support for Arabic in Watsonx Discovery  
+The following Design Decisions have been made for the implementation of the H&S Chatbot:ï¿½
+* Translation service (only in option 3): dependency on IBM to deliver support for Arabic in Watsonx Discovery ï¿½
 * Designing detailed conversation flows for each dialog, including user inputs and chatbot responses, is not required, as generative AI will respond and adapt dynamically.
 * The system is designed to be extendable for future enhancements allowing connection to external international standards libraries
 * Multiple Large Language Models can be used to support the requirements.
 
 
-Component Options Recommendation Justification Deployment * Cloud 
-* On premise On premise Required by SEC, explicitly stated in the SoW Assistant connection * Native (only small models, less customization, no Arabic language),  
-* Custom extensions Custom extensions Due to integration with a few data sources, ensure future extensibility to connect to third party librariesSearch Tool * IBM Watsonx Discovery (ElasticSearch),  
-* IBM WatsonDiscovery,  
-* Custom solution (RAG with vector database) IBM Watsonx Discovery Significantly faster and easier development and maintenance LLM * Granite 13B (English),  
-* jais-13b-chat (support English and Arabic) Multiple, 
-Starting with jaisPrioritizing Arabic. The solution can be extended with other models in the future, if required. Multi-lingual support* Arabic and English will be supported via use of custom extensions 
-(see below for further elaborationUse of custom extensions Long-term solution allowing to leverage a multitude of models, providing greater flexibility and expandability UI * Watson Web widget for Assistant,  
-* Custom UI (React) Custom UI (React) Better User Interface, SEC branding 
+Componentï¿½
+Optionsï¿½
+Recommendationï¿½
+Justificationï¿½
+Deploymentï¿½
+* Cloudï¿½
+* On premiseï¿½
+On premiseï¿½
+Required by SEC, explicitly stated in the SoWï¿½
+Assistant connectionï¿½
+* Native (only small models, less customization, no Arabic language),ï¿½ï¿½
+* Custom extensionsï¿½
+Custom extensionsï¿½
+Due to integration with a few data sources, ensure future extensibility to connect to third party libraries
+Search Toolï¿½
+* IBM Watsonx Discovery (ElasticSearch),ï¿½ï¿½
+* IBM WatsonDiscovery,ï¿½ï¿½
+* Custom solution (RAG with vector database)ï¿½
+IBM Watsonx Discoveryï¿½
+Significantly faster and easier development and maintenanceï¿½
+LLMï¿½
+* Granite 13B (English),ï¿½ï¿½
+* jais-13b-chat (support English and Arabic)ï¿½
+Multiple,ï¿½
+Starting with jais
+Prioritizing Arabic. The solution can be extended with other models in the future, if required.ï¿½
+Multi-lingual support
+* Arabic and English will be supported via use of custom extensions 
+(see below for further elaboration
+Use of custom extensionsï¿½
+Long-term solution allowing to leverage a multitude of models, providing greater flexibility and expandability 
+UIï¿½
+* Watson Web widget for Assistant,ï¿½ï¿½
+* Custom UI (React)ï¿½
+Custom UI (React)ï¿½
+Better User Interface, SEC brandingï¿½
+
 
 Multi-lingual support: Arabic
 Conversation Search (limited to English only) had been initially considered for speed of development and ease of maintenance. With the prioritization of Arabic, IBM recommendation is to use the custom extensions to connect watsonx assistant to LLMs on watsonx.ai to do prompt engineering and manipulate parameters.
@@ -133,50 +245,104 @@ This section includes all personas of the digital solutions (end users), which i
 
 
 2. User Goals
-1. Enhance Safety Compliance: 
-All personas emphasize the importance of ensuring that employees adhere to health and safety regulations and protocols. They aim to create a safe working environment where employees can perform their tasks without risk of injury. 
-2. Improve Communication: Effective communication is a recurring theme. Each persona seeks to enhance the flow of information between different departments, employees, and safety officers to ensure that everyone is informed about safety procedures and updates. 
-3. Streamline Access to Information: There is a shared goal of making safety information and procedures easily accessible to all employees. This includes reducing the time it takes to retrieve necessary documents and ensuring that updates are communicated promptly. 
-4. Foster a Culture of Safety Awareness: Each persona aims to promote a culture where safety is prioritized, and employees are encouraged to be proactive about their safety and the safety of their colleagues. 
-5. Provide Training and Development: Continuous training and development are essential goals for all personas. They focus on ensuring that employees receive the necessary training to understand and implement safety protocols effectively. 
-6. Reduce Response Time to Safety Issues: There is a common desire to minimize delays in addressing safety concerns or incidents. The personas aim to establish quicker response mechanisms for reporting and resolving safety-related issues. 
-7. Utilize Technology for Efficiency: The personas express interest in leveraging technology, such as AI and digital tools, to improve the efficiency of safety information retrieval and communication processes. 
+1. Enhance Safety Compliance:ï¿½
+All personas emphasize the importance of ensuring that employees adhere to health and safety regulations and protocols. They aim to create a safe working environment where employees can perform their tasks without risk of injury.ï¿½
+2. Improve Communication:ï¿½Effective communication is a recurring theme. Each persona seeks to enhance the flow of information between different departments, employees, and safety officers to ensure that everyone is informed about safety procedures and updates.ï¿½
+3. Streamline Access to Information:ï¿½There is a shared goal of making safety information and procedures easily accessible to all employees. This includes reducing the time it takes to retrieve necessary documents and ensuring that updates are communicated promptly.ï¿½
+4. Foster a Culture of Safety Awareness:ï¿½Each persona aims to promote a culture where safety is prioritized, and employees are encouraged to be proactive about their safety and the safety of their colleagues.ï¿½
+5. Provide Training and Development:ï¿½Continuous training and development are essential goals for all personas. They focus on ensuring that employees receive the necessary training to understand and implement safety protocols effectively.ï¿½
+6. Reduce Response Time to Safety Issues:ï¿½There is a common desire to minimize delays in addressing safety concerns or incidents. The personas aim to establish quicker response mechanisms for reporting and resolving safety-related issues.ï¿½
+7. Utilize Technology for Efficiency:ï¿½The personas express interest in leveraging technology, such as AI and digital tools, to improve the efficiency of safety information retrieval and communication processes.ï¿½
 
 3. User Touchpoints 
-1. Communication Channels: 
-* Email: All personas utilize email as a primary method for communicating safety updates, procedures, and inquiries. It serves as a formal channel for documentation and information sharing. 
-* WhatsApp: Informal communication through WhatsApp is used for quick updates and sharing information among team members, especially for immediate needs. 
-* Phone Calls: Direct phone communication is employed for urgent inquiries or discussions that require immediate attention. 
-2. Safety Manuals and Documentation: 
-* Safety Manuals: Each persona references safety manuals as a key resource for procedures and guidelines. They rely on these documents for training and compliance. 
-3. Training Sessions: 
-* Workshops and Training: Regular training sessions are conducted to ensure employees are updated on safety protocols. This is a crucial touchpoint for reinforcing safety knowledge and compliance. 
-4. Incident Reporting: 
-* Accident Reports: The process of reporting incidents and accidents is a significant touchpoint. Each persona discusses the importance of documenting incidents and sharing findings to prevent future occurrences. 
-5. Collaboration with Safety Officers: 
+1. Communication Channels:ï¿½
+* Email: All personas utilize email as a primary method for communicating safety updates, procedures, and inquiries. It serves as a formal channel for documentation and information sharing.ï¿½
+* WhatsApp: Informal communication through WhatsApp is used for quick updates and sharing information among team members, especially for immediate needs.ï¿½
+* Phone Calls: Direct phone communication is employed for urgent inquiries or discussions that require immediate attention.ï¿½
+2. Safety Manuals and Documentation:ï¿½
+* Safety Manuals: Each persona references safety manuals as a key resource for procedures and guidelines. They rely on these documents for training and compliance.ï¿½
+3. Training Sessions:ï¿½
+* Workshops and Training: Regular training sessions are conducted to ensure employees are updated on safety protocols. This is a crucial touchpoint for reinforcing safety knowledge and compliance.ï¿½
+4. Incident Reporting:ï¿½
+* Accident Reports: The process of reporting incidents and accidents is a significant touchpoint. Each persona discusses the importance of documenting incidents and sharing findings to prevent future occurrences.ï¿½
+5. Collaboration with Safety Officers:ï¿½
 * Engagement with Safety Officers: Each persona interacts with safety officers to clarify procedures, report incidents, and receive guidance on safety matters.
 4. User Journey Scenarios
 
-User journey sample scenario 1: 
-This scenario presents interaction with H&S inspector and head of the department. The scenario presented shows the situation when division manager asks question to H&S specialist and how both could utilize AI chatbot replacing standard email communication. 
+User journey sample scenario 1:ï¿½
+This scenario presents interaction with H&S inspector and head of the department. The scenario presented shows the situation when division manager asks question toï¿½H&S specialist and how both could utilize AI chatbot replacing standard email communication.ï¿½
 
-Phase Step User Actions Pain Points/Needs Opportunities (Chatbot Functionalities) Touchpoints Phase 1: Receiving and Communicating Updates Receiving Procedure Updates Opens email, downloads PDF, reads brief description Ensuring timely receipt and understanding of updates Automated Notifications: The chatbot can send automated notifications when new procedure updates are available Email, PDF document  Communicating Updates Composes and sends email to departments, attaches PDF Effective communication to all departments, ensuring everyone is informed The chatbot can integrate with third-party applications and/or implement push notification functionality, effectively replacing various unofficial channels to send updates to all departments and track acknowledgments. Email, internal communication tools/ chatbot Phase 2: Handling Questions Receiving a Question Reads email from division manager Clarifying responsibilities and ensuring accurate information The question could be asked directly via chatbot and redirected to H&S inspector with additional information about the context (user info, department info...) providing suggested answer along with documents link speeding up the process. Email, chatbot  Consulting AI Assistant Types question into AI assistant chatbot Quickly finding relevant information in documents The chatbot can have advanced search capabilities pointing to relevant documents and providing quotes from documents AI assistant chatbot  Receiving an Answer Reads AI assistant's response Interpreting ambiguous information Enhanced Interpretation: The chatbot can provide context and additional explanations to help interpret ambiguous information AI assistant chatbot Phase 3: Seeking Clarification and Providing Interpretation Seeking Additional Information Asks AI assistant about similar procedures and their implementation Accessing comprehensive information on similar procedures The chatbot can access a knowledge base of past implementations and provide relevant information AI assistant chatbot, document repository  Receiving Additional Resources Reviews additional links and documents provided by AI assistant   AI assistant chatbot, document repository  Providing Interpretation Writes and sends a detailed response to the division manager Accurately interpreting and writing answer to user, switching to email app to send the response. The chatbot can offer assistance in writing response by generating answer proposals. H&S inspector would accept AI answer and it can be automatically send via chatbot interface Email, internal communication tools/chatbot 
+Phaseï¿½
+Stepï¿½
+User Actionsï¿½
+Pain Points/Needsï¿½
+Opportunities (Chatbot Functionalities)ï¿½
+Touchpointsï¿½
+Phase 1: Receiving and Communicating Updatesï¿½
+Receiving Procedure Updatesï¿½
+Opens email, downloads PDF, reads brief descriptionï¿½
+Ensuring timely receipt and understanding of updatesï¿½
+Automated Notifications: The chatbot can send automated notifications when new procedure updates are availableï¿½
+Email, PDF documentï¿½
+ï¿½
+Communicating Updatesï¿½
+Composes and sends email to departments, attaches PDFï¿½
+Effective communication to all departments, ensuring everyone is informedï¿½
+The chatbot can integrate with third-party applications and/or implement push notification functionality, effectively replacing various unofficial channels to send updates to all departments and track acknowledgments.ï¿½
+Email, internal communication tools/ chatbotï¿½
+Phase 2: Handling Questionsï¿½
+Receiving a Questionï¿½
+Reads email from division managerï¿½
+Clarifying responsibilities and ensuring accurate informationï¿½
+The question could be asked directly via chatbot and redirected to H&S inspector with additional information about the context (user info, department info...) providing suggested answer along with documents link speeding up the process.ï¿½
+Email, chatbotï¿½
+ï¿½
+Consulting AI Assistantï¿½
+Types question into AI assistant chatbotï¿½
+Quickly finding relevant information in documentsï¿½
+The chatbot can have advanced search capabilities pointing to relevant documents and providing quotes from documentsï¿½
+AI assistant chatbotï¿½
+ï¿½
+Receiving an Answerï¿½
+Reads AI assistant's responseï¿½
+Interpreting ambiguous informationï¿½
+Enhanced Interpretation: The chatbot can provide context and additional explanations to help interpret ambiguous informationï¿½
+AI assistant chatbotï¿½
+Phase 3: Seeking Clarification and Providing Interpretationï¿½
+Seeking Additional Informationï¿½
+Asks AI assistant about similar procedures and their implementationï¿½
+Accessing comprehensive information on similar proceduresï¿½
+The chatbot can access a knowledge base of past implementations and provide relevant informationï¿½
+AI assistant chatbot, document repositoryï¿½
+ï¿½
+Receiving Additional Resourcesï¿½
+Reviews additional links and documents provided by AI assistantï¿½
+ï¿½
+ï¿½
+AI assistant chatbot, document repositoryï¿½
+ï¿½
+Providing Interpretationï¿½
+Writes and sends a detailed response to the division managerï¿½
+Accurately interpreting and writing answer to user, switching to email app to send the response.ï¿½
+The chatbot can offer assistance in writing response by generating answer proposals. H&S inspector would accept AI answer and it can be automatically send via chatbot interfaceï¿½
+Email, internal communication tools/chatbotï¿½
+
 5. Pain Points and Opportunities
 
-1. Delayed Response Time: 
-“Sometimes it takes one to two days to receive answers to safety-related questions, which can halt work until the information is obtained.” 
-2. Complexity of Safety Procedures: 
-“The safety procedures can be complicated, requiring employees to read through many manuals to find specific information, which can be time-consuming". 
-3. Inefficient Communication Channels: 
-The need to relay questions through multiple channels (from employees to supervisors to safety officers) can create delays and inefficiencies in obtaining necessary information. 
-4. Dependence on Safety Officers: 
-Employees often have to rely on safety officers for answers, which can lead to delays if the officer is not immediately available or if the response takes time. 
-5. Lack of Immediate Access to Information: 
-6. “If field employees cannot get answers quickly, it can stop their work, indicating a need for more immediate access to safety information.” 
-7. Language Barriers: 
-There was mention of employees who do not speak English, which can complicate understanding safety procedures that may be documented primarily in English. 
-8. Responsibility Ambiguity: 
-There was a discussion about the responsibility for ensuring that safety information is accurate and up-to-date, leading to potential confusion about accountability in case of incidents. 
+1. Delayed Response Time:ï¿½
+ï¿½Sometimes it takes one to two days to receive answers to safety-related questions, which can halt work until the information is obtained.ï¿½ï¿½
+2. Complexity of Safety Procedures:ï¿½
+ï¿½The safety procedures can be complicated, requiring employees to read through many manuals to find specific information, which can be time-consuming".ï¿½
+3. Inefficient Communication Channels:ï¿½
+The need to relay questions through multiple channels (from employees to supervisors to safety officers) can create delays and inefficiencies in obtaining necessary information.ï¿½
+4. Dependence on Safety Officers:ï¿½
+Employees often have to rely on safety officers for answers, which can lead to delays if the officer is not immediately available or if the response takes time.ï¿½
+5. Lack of Immediate Access to Information:ï¿½
+6. ï¿½If field employees cannot get answers quickly, it can stop their work, indicating a need for more immediate access to safety information.ï¿½ï¿½
+7. Language Barriers:ï¿½
+There was mention of employees who do not speak English, which can complicate understanding safety procedures that may be documented primarily in English.ï¿½
+8. Responsibility Ambiguity:ï¿½
+There was a discussion about the responsibility for ensuring that safety information is accurate and up-to-date, leading to potential confusion about accountability in case of incidents.ï¿½
 
 
 
@@ -186,98 +352,142 @@ There was a discussion about the responsibility for ensuring that safety informa
 
 6. Time and Sequence
 
-Phase Step and Action Standard Timing (Min-Max) Timing with AI Assistant + Time Saved (Min-Max) Phase 1: Receiving and Communicating Updates Receiving Procedure Updates: Opens email, downloads PDF, reads brief description 5-10 min 5-10 min (0 min saved)  Communicating Updates: Composes and sends email to departments, attaches PDF 15-20 min 15-20 min (0 min saved) Phase 2: Handling Questions Receiving a Question: Reads email from division manager 3-5 min 3-5 min (0 min saved)  Consulting AI Assistant: Types question into AI assistant chatbot 3-5 min 3-5 min (0 min saved)  Receiving an Answer: Reads AI assistant's response 3-5 min 3-5 min (0 min saved) Phase 3: Seeking Clarification and Providing Interpretation Seeking Additional Information: Asks AI assistant about similar procedures and their implementation 5-10 min 5-10 min (0 min saved)  Receiving Additional Resources: Reviews additional links and documents provided by AI assistant 10-15 min 10-15 min (0 min saved)  Finding Documents and Information: Searches for documents and other information in the system or document repository 60-90 min 0 min (60-90 min saved)  Scanning Documents for Specific Information: Scans each of the three 200-page documents for relevant keywords or sections 270-300 min 135-150 min (135-150 min saved)  Providing Interpretation: Writes and sends a detailed response to the division manager 25-30 min 10-15 min (15 min saved) 
+Phaseï¿½
+Step and Actionï¿½
+Standard Timing (Min-Max)ï¿½
+Timing with AI Assistant + Time Saved (Min-Max)ï¿½
+Phase 1: Receiving and Communicating Updatesï¿½
+Receiving Procedure Updates: Opens email, downloads PDF, reads brief descriptionï¿½
+5-10 minï¿½
+5-10 min (0 min saved)ï¿½
+ï¿½
+Communicating Updates: Composes and sends email to departments, attaches PDFï¿½
+15-20 minï¿½
+15-20 min (0 min saved)ï¿½
+Phase 2: Handling Questionsï¿½
+Receiving a Question: Reads email from division managerï¿½
+3-5 minï¿½
+3-5 min (0 min saved)ï¿½
+ï¿½
+Consulting AI Assistant: Types question into AI assistant chatbotï¿½
+3-5 minï¿½
+3-5 min (0 min saved)ï¿½
+ï¿½
+Receiving an Answer: Reads AI assistant's responseï¿½
+3-5 minï¿½
+3-5 min (0 min saved)ï¿½
+Phase 3: Seeking Clarification and Providing Interpretationï¿½
+Seeking Additional Information: Asks AI assistant about similar procedures and their implementationï¿½
+5-10 minï¿½
+5-10 min (0 min saved)ï¿½
+ï¿½
+Receiving Additional Resources: Reviews additional links and documents provided by AI assistantï¿½
+10-15 minï¿½
+10-15 min (0 min saved)ï¿½
+ï¿½
+Finding Documents and Information: Searches for documents and other information in the system or document repositoryï¿½
+60-90 minï¿½
+0 min (60-90 min saved)ï¿½
+ï¿½
+Scanning Documents for Specific Information: Scans each of the three 200-page documents for relevant keywords or sectionsï¿½
+270-300 minï¿½
+135-150 min (135-150 min saved)ï¿½
+ï¿½
+Providing Interpretation: Writes and sends a detailed response to the division managerï¿½
+25-30 minï¿½
+10-15 min (15 min saved)ï¿½
+
 
 
 5. Scope and Limitations
 
 5.1. Scope of the digital solutions/ MVPs
-To manage the development scope effectively and ensure timely delivery, the project has been split into the Immediate Scope and the Considerations for the Future Enhancements. The immediate scope includes multiple MVPs (iterations). This approach allows for incremental releases, enabling early feedback and iterative improvements. 
-This Immediate Scope focuses on developing a comprehensive HSSE Chatbot to enhance user interaction with safety-related information by allowing its embedding within web and mobile applications. The chatbot will be integrated with SEC branding and Single Sign-On (SSO) for seamless authentication. It will provide a dialog box for natural language interactions, enabling users to maintain conversation context and access real-time responses from ISMS documents in both English and Arabic. Additionally, the chatbot will integrate with the Enablon system to retrieve safety data via the OData API and allow users to review their conversation history for up to three months. 
+To manage the development scope effectively and ensure timely delivery, the project has been split into the Immediate Scope and the Considerations for the Future Enhancements. The immediate scope includes multiple MVPs (iterations). This approach allows for incremental releases, enabling early feedback and iterative improvements.ï¿½
+This Immediate Scope focuses on developing a comprehensive HSSE Chatbot to enhance user interaction with safety-related information by allowing its embedding within web and mobile applications. The chatbot will be integrated with SEC branding and Single Sign-On (SSO) for seamless authentication. It will provide a dialog box for natural language interactions, enabling users to maintain conversation context and access real-time responses from ISMS documents in both English and Arabic. Additionally, the chatbot will integrate with the Enablon system to retrieve safety data via the OData API and allow users to review their conversation history for up to three months.ï¿½
 For additional functionality, please refer to the high-level proposal to chatbot versions implementation and release approach below.
 While Version 1 is in scope of this Solution Proposal Document, Version 2 onwards will be discussed with the DF team for future enhancements.
- 
+ï¿½
 
 
 1. MVP-1: HSSE Chatbot - Integration with applications
-The feature aims to embed a safety chatbot into both web and mobile applications, enhancing user accessibility and interaction with safety-related information. The chatbot will primarily support the English language with a left-to-right text orientation, ensuring a consistent user experience across various platforms. The integration will adhere to SEC branding guidelines, ensuring that the chatbot's appearance aligns with the SEC's visual identity. Additionally, the feature will support Single Sign-On (SSO) for seamless user authentication and will log specific system events for monitoring and compliance purposes. 
-In-Scope: 
+The feature aims to embed a safety chatbot into both web and mobile applications, enhancing user accessibility and interaction with safety-related information. The chatbot will primarily support the English language with a left-to-right text orientation, ensuring a consistent user experience across various platforms. The integration will adhere to SEC branding guidelines, ensuring that the chatbot's appearance aligns with the SEC's visual identity. Additionally, the feature will support Single Sign-On (SSO) for seamless user authentication and will log specific system events for monitoring and compliance purposes.ï¿½
+In-Scope:ï¿½
 
-1) Web Applications:  
-* Embed the Safety chatbot into web portals 
-* Ensure the chatbot is available in English with left-to-right text orientation and in Arabic with right-to-left text orientation. 
-* Adjust the chatbot interface for desktop screen resolutions. 
-* Ensure accessibility through Google Chrome and Microsoft Edge. 
-2) Mobile Applications: 
-* Embed the Safety chatbot into mobile portals 
+1) Web Applications:ï¿½ï¿½
+* Embed the Safety chatbot into web portalsï¿½
+* Ensure the chatbot is available in English with left-to-right text orientation and in Arabic with right-to-left text orientation.ï¿½
+* Adjust the chatbot interface for desktop screen resolutions.ï¿½
+* Ensure accessibility through Google Chrome and Microsoft Edge.ï¿½
+2) Mobile Applications:ï¿½
+* Embed the Safety chatbot into mobile portalsï¿½
 * Ensure the chatbot is available in English with left-to-right text orientation and in Arabic with right-to-left text orientation
-* Adjust the chatbot interface for mobile screen resolutions. 
-* Ensure accessibility through Google Chrome and Safari. 
-3) Branding: 
-* Adhere to SEC brand guidelines, covering color schemes, fonts, logos, and other visual elements. 
-* Single Sign-On (SSO): 
-- Implement SSO to allow users to authenticate once and access the chatbot without separate logins with support from SEC IT. 
-4) System Logging: 
-* Log specific events, including indexed documents, conversation histories, and system errors for investigation and compliance. 
+* Adjust the chatbot interface for mobile screen resolutions.ï¿½
+* Ensure accessibility through Google Chrome and Safari.ï¿½
+3) Branding:ï¿½
+* Adhere to SEC brand guidelines, covering color schemes, fonts, logos, and other visual elements.ï¿½
+* Single Sign-On (SSO):ï¿½
+- Implement SSO to allow users to authenticate once and access the chatbot without separate logins with support from SEC IT.ï¿½
+4) System Logging:ï¿½
+* Log specific events, including indexed documents, conversation histories, and system errors for investigation and compliance.ï¿½
 * Watsonx offers an in-build analyze capability (number of individual users, number of conversations, etc)
-Assumptions and Limitations: 
-* SEC web and mobile portals will support the import of client JavaScript libraries for embedding. 
+Assumptions and Limitations:ï¿½
+* SEC web and mobile portals will support the import of client JavaScript libraries for embedding.ï¿½
 * SEC will handle SSO configuration and provide testing accounts for the EY team.
 * SEC IT will execute the embedding of the chatbot into SEC mobile applications and webportals
-* Customization of the chatbot's look and feel is out of scope. 
-* SEC IT and HSSE Business teams will decide on the mobile application(s) (iOS, Android) to embed the chatbot. The actual embedding into an existing application (for example, Bawabati) or development of a standalone mobile application will be delivered by SEC IT  
-* The branding guidelines may be outdated, and elements will be retrieved from the SEC website. 
+* Customization of the chatbot's look and feel is out of scope.ï¿½
+* SEC IT and HSSE Business teams will decide on the mobile application(s) (iOS, Android) to embed the chatbot. The actual embedding into an existing application (for example, Bawabati) or development of a standalone mobile application will be delivered by SEC ITï¿½ 
+* The branding guidelines may be outdated, and elements will be retrieved from the SEC website.ï¿½
 2. MVP-2: HSSE Chatbot - Basic chat functionality
-The feature aims to provide users with a basic chat functionality that allows them to interact with the safety chatbot through a dialog box interface. Users will be able to raise requests in natural language, receive responses, maintain conversation context, and copy responses for further use. This feature is designed to enhance user experience by enabling seamless communication with the safety chatbot while ensuring that requests and responses are handled efficiently. 
-In-Scope: 
-* User Interaction: Users will interact with the safety chatbot via a dialog box, which serves as the primary interface for raising requests and communication. 
-* Natural Language Processing: The chatbot will process requests in natural language, allowing users to input text, numbers, dates, and special characters. 
-* Request Submission: Users can submit requests through the dialog box using a submit button or the Enter key. 
-* New Session: Users can initiate a new session with the chatbot. 
-* Response Generation: The chatbot will generate and display responses in the dialog box based on user requests, supporting plain text and rich text formats. 
-* Conversation Context: The chatbot will maintain context within the current session, allowing users to ask follow-up questions. 
-* Copy Responses: Users can copy responses or entire conversations to the clipboard while preserving formatting. 
-Assumptions and Limitations: 
-* Character limits in the dialog box based on the LLM model (e.g., 8192 tokens). 
-* Rich text formatting (e.g., bullet points) and Arabic support are out of scope. 
-* Image extraction is not supported. 
-* Session duration is limited (default 5 minutes) and conversation history is capped at 24 messages. 
+The feature aims to provide users with a basic chat functionality that allows them to interact with the safety chatbot through a dialog box interface. Users will be able to raise requests in natural language, receive responses, maintain conversation context, and copy responses for further use. This feature is designed to enhance user experience by enabling seamless communication with the safety chatbot while ensuring that requests and responses are handled efficiently.ï¿½
+In-Scope:ï¿½
+* User Interaction: Users will interact with the safety chatbot via a dialog box, which serves as the primary interface for raising requests and communication.ï¿½
+* Natural Language Processing: The chatbot will process requests in natural language, allowing users to input text, numbers, dates, and special characters.ï¿½
+* Request Submission: Users can submit requests through the dialog box using a submit button or the Enter key.ï¿½
+* New Session: Users can initiate a new session with the chatbot.ï¿½
+* Response Generation: The chatbot will generate and display responses in the dialog box based on user requests, supporting plain text and rich text formats.ï¿½
+* Conversation Context: The chatbot will maintain context within the current session, allowing users to ask follow-up questions.ï¿½
+* Copy Responses: Users can copy responses or entire conversations to the clipboard while preserving formatting.ï¿½
+Assumptions and Limitations:ï¿½
+* Character limits in the dialog box based on the LLM model (e.g., 8192 tokens).ï¿½
+* Rich text formatting (e.g., bullet points) and Arabic support are out of scope.ï¿½
+* Image extraction is not supported.ï¿½
+* Session duration is limited (default 5 minutes) and conversation history is capped at 24 messages.ï¿½
 3. MVP-3: HSSE Chatbot - Generate responses from ISMS documents
-The feature aims to enhance the chatbot's capabilities by enabling it to generate real-time responses based on the content of ISMS (Integrated Safety Management System) documents originating from the SEC internal library and saved in a dedicated storage. This feature will allow users to interact with the chatbot in both English and Arabic, ensuring that responses are provided in the language of the user's request. The chatbot will index relevant documents, read new additions, and provide references to the original documents, thereby improving the accessibility and usability of safety information. 
-In-Scope: 
-* Document Indexing: The HSSE documents stored in the SEC internal library will be indexed, specifically those in the “Safety and loss prevention sector” folder, including its sub-folders: Controls, Policies, and Procedures. The indexing process will involve saving document embeddings in a database. 
-* Content Handling: The chatbot will handle plain text, formatted text, and tables from the indexed HSSE documents. 
-* Real-Time Response Generation: The safety chatbot will generate responses in real-time from the content of the indexed HSSE documents. 
-* Response References: Each response generated by the chatbot will include references (links) to the HSSE documents used to formulate the response. 
-* New Document Detection: The chatbot will detect and index any new documents added to a selected, dedicated storage, ensuring that the most current data is available for response generation. 
-* Document Deletion Handling: The chatbot will detect when documents are deleted and remove references accordingly. 
-Assumptions and Limitations: 
-* The chatbot will only access HSSE documents stored in PDF and DOCX formats. 
+The feature aims to enhance the chatbot's capabilities by enabling it to generate real-time responses based on the content of ISMS (Integrated Safety Management System) documents originating from the SEC internal library and saved in a dedicated storage. This feature will allow users to interact with the chatbot in both English and Arabic, ensuring that responses are provided in the language of the user's request. The chatbot will index relevant documents, read new additions, and provide references to the original documents, thereby improving the accessibility and usability of safety information.ï¿½
+In-Scope:ï¿½
+* Document Indexing: The HSSE documents stored in the SEC internal library will be indexed, specifically those in the ï¿½Safety and loss prevention sectorï¿½ folder, including its sub-folders: Controls, Policies, and Procedures. The indexing process will involve saving document embeddings in a database.ï¿½
+* Content Handling: The chatbot will handle plain text, formatted text, and tables from the indexed HSSE documents.ï¿½
+* Real-Time Response Generation: The safety chatbot will generate responses in real-time from the content of the indexed HSSE documents.ï¿½
+* Response References: Each response generated by the chatbot will include references (links) to the HSSE documents used to formulate the response.ï¿½
+* New Document Detection: The chatbot will detect and index any new documents added to a selected, dedicated storage, ensuring that the most current data is available for response generation.ï¿½
+* Document Deletion Handling: The chatbot will detect when documents are deleted and remove references accordingly.ï¿½
+Assumptions and Limitations:ï¿½
+* The chatbot will only access HSSE documents stored in PDF and DOCX formats.ï¿½
 * The chatbot will process content and respond in both English and Arabic
-* Images, charts, and diagrams will not be processed by the chatbot. 
-* References to other HSSE documents and international standards will not be handled in this phase. 
+* Images, charts, and diagrams will not be processed by the chatbot.ï¿½
+* References to other HSSE documents and international standards will not be handled in this phase.ï¿½
 * Document versioning, comparison, and archiving of old documents are out of scope.
 * Chatbot will read documents from a dedicated storage set up for the project
 * HSSE Business will be responsible for placing and maintaining the documents in the storage for chatbot to read from
 * HSSE Business will place all the available ISMS documents in the storage for chatbot prior to the Build start
 4. MVP-4: HSSE Chatbot - Generate responses from Enablon data
-The feature focuses on integrating the safety chatbot with Enablon, enabling it to retrieve and generate responses based on safety data stored within the Enablon system. By utilizing the OData API standard, the chatbot will efficiently query and access relevant data, providing users with accurate and timely information. This integration will enhance the chatbot's functionality, allowing it to address user requests related to safety data while considering user permissions and data access. 
-In-Scope: 
-* OData API Integration: The safety chatbot will be compatible with the OData API standard, allowing it to effectively query and retrieve data from Enablon without issues. 
-* User Authentication: When users access the safety chatbot via Single Sign-On (SSO) authentication, the chatbot will use the user's credentials to retrieve data from Enablon. Alternatively, the chatbot may use its own credentials to access data regardless of the user's role and data access permissions. 
-* Response Generation: Users will be able to submit requests related to Enablon data, and the safety chatbot will generate responses based on the retrieved data, adhering to user permissions. 
-* System Prompts: The chatbot will utilize hints or system prompts to determine whether a user request should be directed to ISMS or Enablon. 
- 
-Assumptions and Limitations: 
-* The OData API standard is assumed to be available, stable, and fully functional for data retrieval from Enablon. 
-* The safety chatbot will have read-access to the Enablon data. 
-* Data returned from Enablon is expected to be in JSON or XML format. 
-* The data in Enablon may be available in both English and Arabic, and the chatbot will return responses in the appropriate language based on the data's metadata and content. 
- 
+The feature focuses on integrating the safety chatbot with Enablon, enabling it to retrieve and generate responses based on safety data stored within the Enablon system. By utilizing the OData API standard, the chatbot will efficiently query and access relevant data, providing users with accurate and timely information. This integration will enhance the chatbot's functionality, allowing it to address user requests related to safety data while considering user permissions and data access.ï¿½
+In-Scope:ï¿½
+* OData API Integration: The safety chatbot will be compatible with the OData API standard, allowing it to effectively query and retrieve data from Enablon without issues.ï¿½
+* User Authentication: When users access the safety chatbot via Single Sign-On (SSO) authentication, the chatbot will use the user's credentials to retrieve data from Enablon. Alternatively, the chatbot may use its own credentials to access data regardless of the user's role and data access permissions.ï¿½
+* Response Generation: Users will be able to submit requests related to Enablon data, and the safety chatbot will generate responses based on the retrieved data, adhering to user permissions.ï¿½
+* System Prompts: The chatbot will utilize hints or system prompts to determine whether a user request should be directed to ISMS or Enablon.ï¿½
+ï¿½
+Assumptions and Limitations:ï¿½
+* The OData API standard is assumed to be available, stable, and fully functional for data retrieval from Enablon.ï¿½
+* The safety chatbot will have read-access to the Enablon data.ï¿½
+* Data returned from Enablon is expected to be in JSON or XML format.ï¿½
+* The data in Enablon may be available in both English and Arabic, and the chatbot will return responses in the appropriate language based on the data's metadata and content.ï¿½
+ï¿½
 5. MVP-5: HSSE Chatbot - Conversation history
-The feature aims to provide users with the ability to access and review their past interactions with the chatbot. This includes displaying conversation history from both current and previous sessions. The conversation history will be stored for up to 3 months and presented in a user-friendly manner. 
-Scope 
-* Display Conversation History: Enable users to access their conversation history in both current and new sessions. Ensure the conversation history includes both user requests and chatbot responses. Present the conversation history in a user-friendly manner. Store conversation history for up to 3 months, after which it will be cleared. 
+The feature aims to provide users with the ability to access and review their past interactions with the chatbot. This includes displaying conversation history from both current and previous sessions. The conversation history will be stored for up to 3 months and presented in a user-friendly manner.ï¿½
+Scopeï¿½
+* Display Conversation History: Enable users to access their conversation history in both current and new sessions. Ensure the conversation history includes both user requests and chatbot responses. Present the conversation history in a user-friendly manner. Store conversation history for up to 3 months, after which it will be cleared.ï¿½
 6. MVP-6: HSSE Chatbot - Support for Arabic 
 * Arabic language support will allow users to engage with the system in Arabic, expanding accessibility for a broader audience. 
 Scope
@@ -292,7 +502,7 @@ Assumptions and Limitations:
 * The detailed approach to testing will be included in the test plan supplementing this document.
 
 8. Deploy and Transfer Phase
-* Deployment: Deployment will be done by the SEC IT team on the organization's internal portal using the provided code snippet with support from the DF team within 2 weeks from the UAT sign off. Watsonx Assistant supports versioning and manual deployments via Draft and Live environment to seamlessly update and maintain continuous integration and deployment of the chatbot updates. Changes can be tested in Draft and published manually to Live without impact on users. 
+* Deployment: Deployment will be done by the SEC IT team on theï¿½organization's internal portal using the provided code snippet with support from the DF team within 2 weeks from the UAT sign off. Watsonx Assistant supports versioning and manual deployments via Draft and Live environment to seamlessly update and maintain continuous integration and deployment of the chatbot updates. Changes can be tested in Draft and published manually to Live without impact on users. 
 * Transfer: Training and awareness sessions for safety experts and business champions will follow the train-the trainer approach and will be scheduled and coordinated by the SEC Business Champion aligning with the DF team availability within 2 weeks from the deployment. Supporting presentation materials (one tutorial and one guideline for the Chatbot Users) and infographics will also be provided. 
 
 
@@ -300,10 +510,195 @@ Assumptions and Limitations:
 5.2. Timeline and activities
 Timeline below is illustrating the plan for the functionality being ready for the handover to the SEC Health and Safety stakeholders for feedback and testing, it does not provide a detailed insight into the UK, development and testing work completed by the EY DF team.
 EY DF team will set up regular calls with the SEC business Product Owner to demonstrate the functionalities and receive continuous feedback.
-Week 1-2Week 2-4Week 4-6Week 6-8Week 9-10Week 11-12Week 13-14Week 15-18Chat fundamentals – generating responses       Requests in English       Requests in Arabic       Switch UI to Arabic        ISMS – generating responses (English)       Web User Interface      Generating responses based on Enablon (English)      Arabic support for Enablon data       Supporting ISMS documents in Arabic      Mobile UI      Web & Mobile: SEC branding       ISMS – detecting new documents        Copying responses       Conversation context handling      Displaying conversation history       Collecting system logs      Bug fix & UAT       Manual and deployment
+Week 1-2
+Week 2-4
+Week 4-6
+Week 6-8
+Week 9-10
+Week 11-12
+Week 13-14
+Week 15-18
+Chat fundamentals ï¿½ generating responses
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+Requests in English
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+Requests in Arabic
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+Switch UI to Arabic
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ISMS ï¿½ generating responses (English)
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+
+Web User Interface
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+
+Generating responses based on Enablon (English)
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+
+Arabic support for Enablon data
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+
+Supporting ISMS documents in Arabic
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+
+Mobile UI
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+
+Web & Mobile: SEC branding
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+
+ISMS ï¿½ detecting new documents
+  ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+
+Copying responses
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+
+Conversation context handling
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+
+Displaying conversation history
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+
+Collecting system logs
+
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+
+Bug fix & UAT
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+ï¿½
+Manual and deployment
+
 5.3. Resources allocation plan
-Role Years of experience Skillset Back end developer 5+ watsonx, AI/ Machine Learning Back end developer 4+ watsonx, AI/ Machine Learning Front end developer 5+ Front end development - development of User Interface, React or Angular Front end developer 4+ Front end development - development of User Interface, React or Angular QA Lead 10+ Quality Assurance, developing test strategy, test plan, documenting test cases and test execution Architect 20+ Solution Design, Architecture Design Functional Analyst (BA)15+ Business AnalysisTechnical Product Manager15+Technical Product Manager - definition of product scope Customer Experience / UI/UX Designer10+ User Experience - functional design Project Manager 10+ Overall Project delivery5.4. Limitations and exclusions (if any)
-Limitations related to the Immediate Scope have been defined under the relevant MVP features in order to keep the functional context.  
+Roleï¿½
+Years of experienceï¿½
+Skillsetï¿½
+Back end developerï¿½
+5+ï¿½
+watsonx, AI/ Machine Learningï¿½
+Back end developerï¿½
+4+ï¿½
+watsonx, AI/ Machine Learningï¿½
+Front end developerï¿½
+5+ï¿½
+Front end development - development of User Interface, React or Angularï¿½
+Front end developerï¿½
+4+ï¿½
+Front end development - development of User Interface, React or Angularï¿½
+QA Leadï¿½
+10+ï¿½
+Quality Assurance, developing test strategy, test plan, documenting test cases and test executionï¿½
+Architectï¿½
+20+ï¿½
+Solution Design, Architecture Designï¿½
+Functional Analystï¿½(BA)
+15+ï¿½
+Business Analysis
+Technical Product Manager
+15+
+Technical Product Manager - definition of product scopeï¿½
+Customer Experience / UI/UX Designer
+10+ï¿½
+User Experience - functional designï¿½
+Project Managerï¿½
+10+ï¿½
+Overall Project delivery
+5.4. Limitations and exclusions (if any)
+Limitations related to the Immediate Scope have been defined under the relevant MVP features in order to keep the functional context.ï¿½ï¿½
 
 
 6. Solution Mockup (if applicable)
@@ -316,9 +711,44 @@ Limitations related to the Immediate Scope have been defined under the relevant 
 7. Data Assessment
 
 Data Availability Assessment
-# Datasets required Data Sources / Data System Data availability Comment 1 ISMS Standards documentation Sharepoint Some documents are available, but no access granted to EY team Access to be granted by SEC Business and IT team to allow the chatbot to read from this source 2 Enablon (AMAN) reporting data Enablon database Not available SEC IT and EY Enablon team support to access the data is required. This system only went live in December 2024. SEC Business team recommended using UAT environment – assuming the data resembles future production data 3 User role and access to the company SSO TBCTBC SEC IT input required 
+#ï¿½
+Datasets requiredï¿½
+Data Sources / Data Systemï¿½
+Data availabilityï¿½
+Commentï¿½
+1ï¿½
+ISMS Standards documentationï¿½
+Sharepointï¿½
+Some documents are available, but no access granted to EY teamï¿½
+Access to be granted by SEC Business and IT team to allow the chatbot to read from this sourceï¿½
+2ï¿½
+Enablon (AMAN) reporting dataï¿½
+Enablon databaseï¿½
+Not availableï¿½
+SEC IT and EY Enablon team support to access the data is required. This system only went live in December 2024. SEC Business team recommended using UAT environment ï¿½ assuming the data resembles future production dataï¿½
+3ï¿½
+User role and access to the company SSOï¿½
+TBC
+TBCï¿½
+SEC IT input requiredï¿½
+
 7.1. Data Quality Assessment
-# Dataset name data element name "CDE" Data quality issue identified Issue Status (Resolved / Not Resolved This will be tackled by the system owners. 1 ISMS Standards documentation   The quality of the data is currently not known, as no access has been provided 2 Enablon   The quality of the data is currently not known, as no access has been provided 
+#ï¿½
+Dataset nameï¿½
+data element name "CDE"ï¿½
+Data quality issue identifiedï¿½
+Issue Status (Resolved / Not Resolved This will be tackled by the system owners.ï¿½
+1ï¿½
+ISMS Standards documentationï¿½
+ï¿½
+ï¿½
+The quality of the data is currently not known, as no access has been providedï¿½
+2ï¿½
+Enablonï¿½
+ï¿½
+ï¿½
+The quality of the data is currently not known, as no access has been providedï¿½
+
 7.2. Data Security and Privacy Assessment
 ? For any use case that will tackle PII (personally identifiable information), explicit approval needs to be obtained by the relevant teams Privacy/ InfoSec/Cyber to make sure that the solution is compliant with the PDPL and data regulations within the Kingdom, such as:
 * Name 
@@ -333,14 +763,14 @@ Data Availability Assessment
 
 8. Potential Benefits
 
-? This The HSSE Chatbot solution offers several potential benefits for the Saudi Electricity Company (SEC): 
-* Cost Savings: By automating responses to health and safety-related queries, the chatbot reduces the need for manual intervention, leading to significant cost savings in terms of labor and time. 
-* Productivity: The chatbot provides real-time answers to stakeholders, minimizing delays and improving the efficiency of the safety management process. 
-* Effectiveness: With the chatbot's ability to provide accurate and timely information, the overall effectiveness of the HSSE system is enhanced, leading to better decision-making and risk management. 
-* Quality: The chatbot ensures consistent and high-quality responses, reducing the chances of errors and improving the reliability of the information provided. 
-* Innovation: Implementing a digital solution like the HSSE Chatbot demonstrates SEC's commitment to innovation and leveraging advanced technologies to improve business processes. 
-* Employee Satisfaction: By providing a formal communication gateway for safety knowledge and information, the chatbot enhances employee satisfaction and engagement. 
-* Regulatory Compliance: The chatbot helps ensure compliance with health and safety regulations by providing accurate and up-to-date information based on ISMS standards and AMAN Health-and-safety management system. 
+? This The HSSE Chatbot solution offers several potential benefits for the Saudi Electricity Company (SEC):ï¿½
+* Cost Savings: By automating responses to health and safety-related queries, the chatbot reduces the need for manual intervention, leading to significant cost savings in terms of labor and time.ï¿½
+* Productivity: The chatbot provides real-time answers to stakeholders, minimizing delays and improving the efficiency of the safety management process.ï¿½
+* Effectiveness: With the chatbot's ability to provide accurate and timely information, the overall effectiveness of the HSSE system is enhanced, leading to better decision-making and risk management.ï¿½
+* Quality: The chatbot ensures consistent and high-quality responses, reducing the chances of errors and improving the reliability of the information provided.ï¿½
+* Innovation: Implementing a digital solution like the HSSE Chatbot demonstrates SEC's commitment to innovation and leveraging advanced technologies to improve business processes.ï¿½
+* Employee Satisfaction: By providing a formal communication gateway for safety knowledge and information, the chatbot enhances employee satisfaction and engagement.ï¿½
+* Regulatory Compliance: The chatbot helps ensure compliance with health and safety regulations by providing accurate and up-to-date information based on ISMS standards and AMAN Health-and-safety management system.ï¿½
 * Operational Efficiency: The chatbot streamlines the process of addressing health and safety queries, leading to improved operational efficiency and reduced response times.
 
 9. Constraints, Assumptions and Dependencies 
@@ -356,14 +786,14 @@ The following constraints are associated with the delivery of the HSSE Chatbot s
 
 
 9.2. Assumptions
-The following assumptions are made for the delivery of the HSSE Chatbot solution: 
-* Stakeholder Support: It is assumed that all relevant stakeholders will provide the necessary support and cooperation throughout the project. 
-* Data Availability: It is assumed that the required data from ISMS standards documentation and Enablon system will be made available in a timely manner. 
-* Integration Readiness: It is assumed that the necessary integration points and APIs will be available and functional for the chatbot to access required data sources. 
-* API Standards – it is assumed that the standard ODATA API is used for Enablon. If not, the scope of this project may need to be adjusted 
+The following assumptions are made for the delivery of the HSSE Chatbot solution:ï¿½
+* Stakeholder Support: It is assumed that all relevant stakeholders will provide the necessary support and cooperation throughout the project.ï¿½
+* Data Availability: It is assumed that the required data from ISMS standards documentation and Enablon system will be made available in a timely manner.ï¿½
+* Integration Readiness: It is assumed that the necessary integration points and APIs will be available and functional for the chatbot to access required data sources.ï¿½
+* API Standards ï¿½ it is assumed that the standard ODATA API is used for Enablon. If not, the scope of this project may need to be adjustedï¿½
 
 9.3. Dependencies
-The successful delivery of the HSSE Chatbot solution is dependent on several key factors: 
+The successful delivery of the HSSE Chatbot solution is dependent on several key factors:ï¿½
 * The build will only start once EY Team has received all the required accesses. Specifically, this includes:
 - SEC ID
 - Configured watsonx according to the requirements
@@ -372,9 +802,9 @@ The successful delivery of the HSSE Chatbot solution is dependent on several key
 - Access to Enablon
 - Access to the VM and SEC infrastructure
 * The build will only start once the GPUs (Graphic Processing Units) are available as they are required for the system to function properly and ensure optimal performance.
-* Availability of the watsonx Technology: The watsonx technology must be available and operational within the SEC environment. This includes ensuring that the necessary hardware and software infrastructure is in place and functioning correctly. 
-* Access to the SEC IT Environment: The delivery team requires access to the SEC IT environment for the on-premises development and deployment of the chatbot. This includes access to servers, databases, and other IT resources necessary for development, testing, and deployment phases. 
-* Read Access to AMAN (SEC Enablon) System: The team needs read access to the AMAN (SEC Enablon) system to retrieve source data. This includes access to the UAT environment for building and testing purposes, as well as the PROD environment for final deployment. 
+* Availability of the watsonx Technology: The watsonx technology must be available and operational within the SEC environment. This includes ensuring that the necessary hardware and software infrastructure is in place and functioning correctly.ï¿½
+* Access to the SEC IT Environment: The delivery team requires access to the SEC IT environment for the on-premises development and deployment of the chatbot. This includes access to servers, databases, and other IT resources necessary for development, testing, and deployment phases.ï¿½
+* Read Access to AMAN (SEC Enablon) System: The team needs read access to the AMAN (SEC Enablon) system to retrieve source data. This includes access to the UAT environment for building and testing purposes, as well as the PROD environment for final deployment.ï¿½
 * Availability of SEC ISMS Standards Documentation: The SEC ISMS standards documentation must be available in a file storage system that the chatbot can access before the start of the Build. This ensures that the chatbot can retrieve and utilize the necessary information to provide accurate responses.
 * SEC Business will designate a Product Owner for regular collaboration with EY Technical Product Owner to provide detailed information required for the implementation of the chatbot (for example, review and acceptance of the User Stories), participation in product functionality demonstrations provided by the development team and to provide feedback on the ongoing development of the chatbot
 
@@ -383,11 +813,44 @@ The successful delivery of the HSSE Chatbot solution is dependent on several key
 
 10. References
 
-User Interviews Questionnaire:  
+User Interviews Questionnaire: ï¿½
 
 11. Approvals
 
-Approval TableName & SignatureDateDF Lead Date ApprovedSEC PMDate ApprovedBusiness ChampionDate ApprovedExecution Department ManagerDate ApprovedDigital Products Management Division ManagerDate ApprovedDigital Products Delivery Department ManagerDate Approved
+Approval Table
+Name & Signature
+Date
+DF Lead 
+
+
+Date Approved
+
+SEC PM
+
+
+Date Approved
+
+Business Champion
+
+
+Date Approved
+
+Execution Department Manager
+
+
+Date Approved
+
+Digital Products Management Division Manager
+
+
+Date Approved
+
+Digital Products Delivery Department Manager
+
+
+Date Approved
+
+
 
 
 
@@ -397,7 +860,7 @@ Approval TableName & SignatureDateDF Lead Date ApprovedSEC PMDate App
 Page 2 of 6
 SPD V10 26/01/2025
 
-
+End
 
 
                                                                     
